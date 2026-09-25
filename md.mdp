@@ -1,0 +1,56 @@
+title            	 = 
+cpp		 = 
+include 		 = 
+define		 = 			;{-DFLEXIBLE,-DPOSRES} 
+integrator	 = md
+dt		 = 0.001
+comm_mode	 = Linear		;{Linear,Angular,No}
+nstcomm		 = 
+nstcalcenergy	 = 
+nsttcouple	 = 
+nstpcouple	 = 
+comm_grps	 = 
+nsteps  		 = 100000
+nstxout 		 = 1000
+nstvout 		 = 1000
+nstlog  		 = 1000
+nstenergy	 = 1000
+nstxtcout		 = 1000
+nstlist 		 = 10
+ns_type 		 = grid			;simple,grid
+rlist		 = 1.5
+coulombtype	 = Cut-off
+fourierspacing	 = 0.12	  		;[0.12 nm]
+optimize_fft	 = yes	  		;no,yes
+rcoulomb		 = 1.5
+vdwtype		 = shift
+rvdw		 = 1.2
+DispCorr		 = no			;no,EnerPres,Ener
+tcoupl  		 = berendsen		;no,berendsen,nose-hoover,v-rescale
+tc-grps 		 = P S 
+tau_t		 = 3.0 1.0		
+ref_t		 = 3461.11 1500.
+Pcoupl  		 = no			;no,berendsen,Parrinello-Rahman
+Pcoupltype	 = semiisotropic		;isotropic,semiisotropic,anisotropic
+tau_p		 = 4. 4.
+compressibility 	 = 0. 4.5e-5
+ref_p		 = 0. 0.			;the unit is bar(1 bar =10^5 Pa)
+gen_vel 		 = yes
+gen_temp	 = 3461.11 1500.
+gen_seed		 = 173529
+constraints	 = none			;none,hbonds,all-bonds,h-angles,all-angles
+constraint_algorithm = LINCS		;LINCS,SHAKE
+periodic_molecules =			;no,yes
+
+pbc		 = xyz	  		;xyz,no,xy
+
+deform  		 =  
+
+annealing	 = no			;no,single,periodic
+annealing_npoints	 = 2
+annealing_time	 = 0 450000 
+annealing_temp	 = 500 50
+
+
+
+
